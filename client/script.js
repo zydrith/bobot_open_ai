@@ -8,7 +8,7 @@ let loadInterval;
 
 
 function loader(element) {
-  element.textContent = '';
+  element.textContent = ''
 
   loadInterval = setInterval(() => {
     element.textContent += '.';
@@ -37,16 +37,16 @@ function generateUniqueId() {
   const randomNumber = Math.random();
   const hexadecimalString = randomNumber.toString(16);
 
-  return `${timestamp}-${hexadecimalString}`;
+  return `id-${timestamp}-${hexadecimalString}`;
 }
 
 function chatStripe (isAi, value, uniqueId) {
   return (
     `
-      <div class=""wrapper ${isAi && 'ai'}>
-        <div class=""chat>
+      <div class="wrapper ${isAi && 'ai'}">
+        <div class="chat">
           <div class="profile">
-            <img src="${isAi ? bot : user}" 
+            <img src=${isAi ? bot : user}
               alt="${isAi ? 'bot' : 'user'}"
             />
           </div>
